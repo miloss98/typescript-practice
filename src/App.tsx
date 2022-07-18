@@ -1,9 +1,12 @@
 import "./App.css";
 
 function App() {
+  let juice: string | number;
+  juice = "orange juice";
+
   return (
     <div>
-      <h1> test </h1>
+      <h4> {juice} </h4>
     </div>
   );
 }
