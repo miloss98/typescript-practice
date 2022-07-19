@@ -18,8 +18,11 @@ const App: React.FC = () => {
       </section>
       <section className="main-content">
         <div className="inputs-container">
-          <p className="inputs"> task </p>
-          <p className="inputs"> deadline </p>
+          <article className="task-container"></article>
+          <label htmlFor="task"> Task </label>
+          <input type="text" className="inputs" name="task" />
+          <label htmlFor="deadline"> Deadline </label>
+          <input type="text" className="inputs" />
           <button className="add-task-btn"> add task</button>
         </div>
       </section>
