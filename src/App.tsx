@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent } from "react";
+import Task from "./Task";
 import "./App.css";
 
 interface TaskListInterface {
@@ -23,7 +24,6 @@ const App: React.FC = () => {
     setTaskList([...taskList, newTask]);
     setTask("");
     setDeadline(0);
-    console.log(taskList);
   };
 
   return (
@@ -53,6 +53,9 @@ const App: React.FC = () => {
             {" "}
             add task
           </button>
+        </div>
+        <div className="tasks-container">
+          <Task />
         </div>
       </section>
     </div>
