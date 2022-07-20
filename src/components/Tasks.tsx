@@ -46,6 +46,7 @@ const Tasks: React.FC = () => {
           <input
             type="number"
             className="inputs-deadline"
+            value={deadline}
             placeholder="deadline"
             onChange={handleInput}
           />
