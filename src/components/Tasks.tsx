@@ -21,7 +21,13 @@ const Tasks: React.FC = () => {
     setTask("");
     setDeadline(0);
   };
-
+  const removeTask = (taskNameToDelete: string): void => {
+    setTaskList(
+      taskList.filter((task) => {
+        return task.task !== taskNameToDelete;
+      })
+    );
+  };
   return (
     <div className="container">
       <section className="header">
@@ -55,7 +61,7 @@ const Tasks: React.FC = () => {
             <p className="category"> Deadline</p>
           </div>
           {taskList.map((task: TaskListInterface, key: number) => {
-            return <Task tasks={task} key={key} />;
+            return <Task removeTask={removeTask} tasks={task} key={key} />;
           })}
         </div>
       </section>
