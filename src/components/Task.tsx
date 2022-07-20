@@ -1,5 +1,5 @@
 import React from "react";
-import { TaskListInterface } from "./App";
+import { TaskListInterface } from "./../interfaces/taskListInterface";
 
 interface Props {
   tasks: TaskListInterface;

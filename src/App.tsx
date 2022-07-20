@@ -1,11 +1,7 @@
 import React, { useState, ChangeEvent } from "react";
-import Task from "./Task";
+import Task from "./components/Task";
 import "./App.css";
-
-export interface TaskListInterface {
-  task: string;
-  deadline: number;
-}
+import { TaskListInterface } from "./interfaces/taskListInterface";
 
 const App: React.FC = () => {
   const [task, setTask] = useState<string>("");
