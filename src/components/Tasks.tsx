@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from "react";
 import Task from "./Task";
-import "./../styles/App.css";
+import "./../styles/tasks.css";
 import { TaskListInterface } from "./../interfaces/taskListInterface";
 
 const Tasks: React.FC = () => {
@@ -25,12 +25,10 @@ const Tasks: React.FC = () => {
   return (
     <div className="container">
       <section className="header">
-        <h1 className="title">typescript practice</h1>
+        <h1 className="title">Enter task name and deadline:</h1>
       </section>
       <section className="main-content">
         <div className="inputs-container">
-          <article className="task-container"></article>
-          <label htmlFor="task"> Task: </label>
           <input
             type="text"
             className="inputs"
@@ -38,7 +36,6 @@ const Tasks: React.FC = () => {
             value={task}
             onChange={handleInput}
           />
-          <label htmlFor="deadline"> Deadline: </label>
           <input
             type="number"
             className="inputs"
@@ -51,6 +48,11 @@ const Tasks: React.FC = () => {
           </button>
         </div>
         <div className="tasks-container">
+          <h1 className="list-title">List of tasks </h1>
+          <div className="categories">
+            <p className="category">Task</p>
+            <p className="category"> Deadline</p>
+          </div>
           {taskList.map((task: TaskListInterface, key: number) => {
             return <Task tasks={task} key={key} />;
           })}
