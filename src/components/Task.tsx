@@ -1,11 +1,10 @@
-import React from "react";
 import { TaskListInterface } from "./../interfaces/taskListInterface";
 
 interface Props {
   tasks: TaskListInterface;
 }
 
-const Task: React.FC<Props> = ({ tasks }) => {
+const Task = ({ tasks }: Props) => {
   return (
     <div>
       <p>{tasks.task}</p>
