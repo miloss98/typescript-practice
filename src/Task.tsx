@@ -1,7 +1,17 @@
 import React from "react";
+import { TaskListInterface } from "./App";
 
-const Task: React.FC = () => {
-  return <div>Task</div>;
+interface Props {
+  tasks: TaskListInterface;
+}
+
+const Task: React.FC<Props> = ({ tasks }) => {
+  return (
+    <div>
+      <p>{tasks.task}</p>
+      <p> {tasks.deadline}</p>
+    </div>
+  );
 };
 
 export default Task;

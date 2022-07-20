@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent } from "react";
 import Task from "./Task";
 import "./App.css";
 
-interface TaskListInterface {
+export interface TaskListInterface {
   task: string;
   deadline: number;
 }
@@ -55,7 +55,9 @@ const App: React.FC = () => {
           </button>
         </div>
         <div className="tasks-container">
-          <Task />
+          {taskList.map((task: TaskListInterface, key: number) => {
+            return <Task tasks={task} key={key} />;
+          })}
         </div>
       </section>
     </div>
