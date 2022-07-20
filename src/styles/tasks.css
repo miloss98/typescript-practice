@@ -61,7 +61,7 @@ input::placeholder {
   cursor: pointer;
   background-color: tomato;
   color: white;
-  border-radius: 5px;
+  border-radius: 3px;
   height: 60%;
   width: 15%;
   font-size: 1.1rem;
@@ -98,4 +98,32 @@ input::placeholder {
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 2px;
+}
+/* footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 40px;
+}
+.clear-all {
+  height: 80%;
+  width: 100px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+}
+.clear-all:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+.empty {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: red;
 }

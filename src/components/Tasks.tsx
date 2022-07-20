@@ -28,6 +28,10 @@ const Tasks: React.FC = () => {
       })
     );
   };
+
+  const removeAllTasks = (): void => {
+    setTaskList([]);
+  };
   return (
     <div className="container">
       <section className="header">
@@ -62,9 +66,18 @@ const Tasks: React.FC = () => {
             <p className="category"> Deadline</p>
           </div>
           {taskList.map((task: TaskListInterface, key: number) => {
-            return <Task removeTask={removeTask} tasks={task} key={key} />;
+            return <Task key={key} tasks={task} removeTask={removeTask} />;
           })}
         </div>
+        {taskList.length !== 0 ? (
+          <section className="footer">
+            <button className="clear-all" onClick={removeAllTasks}>
+              Clear all
+            </button>
+          </section>
+        ) : (
+          <h4 className="empty">List is empty. </h4>
+        )}
       </section>
     </div>
   );
