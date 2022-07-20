@@ -25,21 +25,22 @@ const Tasks: React.FC = () => {
   return (
     <div className="container">
       <section className="header">
-        <h1 className="title">Enter task name and deadline:</h1>
+        <h1 className="title">Tasks app</h1>
       </section>
       <section className="main-content">
         <div className="inputs-container">
           <input
             type="text"
-            className="inputs"
+            className="inputs-task"
             name="task"
             value={task}
+            placeholder="task name here"
             onChange={handleInput}
           />
           <input
             type="number"
-            className="inputs"
-            value={deadline}
+            className="inputs-deadline"
+            placeholder="deadline"
             onChange={handleInput}
           />
           <button onClick={addTask} className="add-task-btn">

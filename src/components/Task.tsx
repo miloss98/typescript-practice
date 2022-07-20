@@ -14,9 +14,11 @@ const Task = ({ tasks }: Props) => {
       <div className="deadline-container">
         <p className="deadline"> {tasks.deadline} day(s)</p>
       </div>
-      <button className="remove-btn">
-        <img className="remove-icon" src={remove_icon} alt="remove" />
-      </button>
+      <div className="btn-container">
+        <button className="remove-btn">
+          <img className="remove-icon" src={remove_icon} alt="remove" />
+        </button>
+      </div>
     </div>
   );
 };
